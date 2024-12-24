@@ -21,11 +21,11 @@ Mantain Multiple servers
 ### Diff bt Ansible and Puppet
 
 1. **Puppet**
-  * pull Mechanism
-  * Master Slave Architecute
-  * puppet Language
+     * pull Mechanism
+     * Master Slave Architecute
+     * puppet Language
 
 2. **Ansible**
-  * push mechanism
-  * Agentless
-  * Ansible Playbook(Yaml language)
+     * push mechanism
+     * Agentless
+     * Ansible Playbook(Yaml language)
