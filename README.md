@@ -2,7 +2,7 @@
 
 Mantain Multiple servers
 
-1. Ansible used Push Mechanism
+1. Ansible using Push Mechanism
 2. AgentLess
 3. Dynamic Inventory concept
 4. It uses yaml file to write the code in Ansible
