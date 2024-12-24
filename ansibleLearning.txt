@@ -1,0 +1,61 @@
+1.passwordless authentication(ssh -keygen)
+    get the public key of the ansible server and paste it in the target server's authorised key to do a password less authentication.
+    with that we can do shh for all the server
+
+    Access target server: shh <private Ip>
+
+2. Ansible Adhoc commands - use it for single line or 2 line commands in CLI
+    playbooks - multi line commands
+
+3. create a Inventory file - add all the target Ip address in the Inventory
+
+4. print all the ip address : 
+
+cmd : ansible -i inventory all
+
+5. create a file in all the target server
+
+cmd : ansible -i inventory -m "shell" -a "touch firstFile"
+cmd : ansible -i inventory -m "shell" -a "df"
+
+6.grouping of server
+vim inventory
+
+[web server]
+90.12.3.13
+123.53.2.1
+
+[db server]
+
+34.12.3.3
+
+cmd : ansible -i inventory web server -m "shell" -a "touch newfile"
+
+7. install and start nginx in all the server
+
+vim kavi.yml
+
+---
+- name : install and start nginx
+  hosts : all
+  become : root
+
+ tasks:
+    - name: install nginx
+        apt:
+            name: nginx
+            state : present
+    
+    -name: start nginx
+        services:
+            name: nginx
+            state: started
+
+cmd to run : ansible-playbook -i inventory kavi.yml
+
+debug : -v (verbose)
+
+18. Ansible Roles
+Efficient way to right complex playbooks - we can segergate and seperate
+
+cmd : ansible-galaxy role init kubernetes
