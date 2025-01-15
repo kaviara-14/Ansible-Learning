@@ -1,4 +1,4 @@
-1. Before Ansible, people if they want to install any software or upgrades the os on the VM.they will login to each and every application and do the necessity function.for every os they have different commands.
+1. Before Ansible, people if they want to install any software or upgrades the os on the VM.they will login to each and every VM and do the necessity function.for every os they have different commands.
 
 After,
     1. Puppet
