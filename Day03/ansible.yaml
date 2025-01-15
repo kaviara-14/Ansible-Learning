@@ -1,0 +1,53 @@
+---
+
+string: 'kaviarasu'
+age: 14
+boolean: true
+
+# list
+Achievements:
+  - AWS Devops
+  - Awards in Vuram
+
+# dictionary key value pair
+Address: 
+  street1: chennai 1
+  city: chennai 
+  state: tamil Nadu
+
+
+## creating a playbook - we can create multiple plays
+
+---
+host: all
+remote-user(become) : true 
+task:
+  - install apache server 
+  - host the web application on html page
+
+
+# 1. host can be anything all or group or specific user.
+# 2. remote-user which user ubuntu user or root user.
+# 3. in the task section we need to define module as list
+# 4. like install postrgess db and start the db..these are different plays 
+# 5. install apache server and host webapplication on the server.
+
+# 6. how to run
+# anisble-playbooks -i inventory.ini first-playbook.yml
+# once this run, it will first
+  # - gather the information like try to connect the task
+  # - install the package 
+
+--- 
+
+# how to install a postrgres db and start the postrgess db in all the instance.
+
+# 1. first create inventory add all the instance username with public ip.
+# 2. make sure to enable the password less authentication.
+# 3. create a playbook
+# 4. host give all
+# 5. remote-user as root user
+# 6. in the task we need to mention the modules as list
+# 7. install the apache server
+# 8. then start the apache server
+# 9. run using anisble-playbooks -i inventory.ini firstplaybook.yml
