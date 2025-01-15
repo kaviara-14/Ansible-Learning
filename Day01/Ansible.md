@@ -17,7 +17,6 @@ After,
 - Here we have control node and manage node.
 - u can choose any os distribution as control node in VM, install ansible and create inventory and run the command..it will install necessary software in all the manage nodes. 
 - In the inventory we need to add the public ip of the other vm's(manage node).
-
 - Ansible we need to write it in YAML File, this will convert the yaml code to python..and with python it will communicate automatically to other vm's.
 
 
